@@ -1,0 +1,221 @@
+/*
+  COLORS:
+  #5BC8AC
+  #98DBC6
+  #E6D27A
+  #f18d9e
+*/
+
+html {
+  font-size: 3vh;
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("/img/tulips.jpg"),
+    #98DBC6;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.navbar {
+  height: 3rem;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  padding: 0;
+  color: white;
+}
+.navbar *:hover {
+  color: #f18d9e;;
+  transition: color 0.4s;
+}
+.navbar-link {
+  color: white;
+  display: inline-block;
+  height: 15vh;
+  line-height: 5rem;
+  margin: 0;
+  padding: 0;
+  transition: color 0.6s;
+  font-size: 1rem;
+  text-align: center;
+  padding-right: 2rem;
+  float: right;
+}
+.header {
+  position: absolute;
+  color: white;
+  top: 15vh;
+  left: 0;
+  width: 100%;
+  height: 85vh;
+  padding: 0;
+  margin: 0;
+  line-height: 75vh;
+  text-align: center;
+}
+.header span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  max-width: 27rem;
+}
+
+.projects {
+  position: absolute;
+  left: 0;
+  top: 100vh;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0;
+  grid-auto-rows: 33vw;
+}
+.project-div.a {
+  background-color: #E6D27A;
+}
+.project-div.b {
+  background-color: #f18d9e;
+}
+.project-div.c {
+  background-color: #5BC8AC;
+}
+.project-div {
+  text-align: center;
+  position: relative;
+  transition: box-shadow 0.6s;
+}
+.project-div img {
+  position: absolute;
+  top: 28%;
+  left: 10%;
+  width:80%;
+  height:44%;
+  border-radius: 0.3rem;
+}
+.project-div .description {
+  position: absolute;
+  transition: opacity 0.6s;
+  opacity: 0;
+  bottom: 0;
+  padding: 3rem;
+  color: white;
+  background-color: rgba(0,0,0, 0.3);
+}
+.project-div:hover .description {
+  opacity: 1;
+  transition: opacity 0.4s;
+}
+.project-div:hover {
+  box-shadow: 0px 0px 2rem rgba(0,0,0,0.5);
+  transition: box-shadow 0.4s;
+  z-index: 1000;
+}
+.about {
+  position: absolute;
+  top: 100vh;
+  margin-top: 99vw;
+  background-color: #E6D27A;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  line-height: 100vh;
+  font-size: 2rem;
+  left: 0;
+}
+.about span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  width: 29rem;
+  max-width: 90%;
+  font-weight: bold;
+}
+.contact {
+  position: absolute;
+  top: 200vh;
+  margin-top: 99vw;
+  background-color: #5BC8AC;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+  color: white;
+  line-height: 100vh;
+  font-size: 2rem;
+  left: 0;
+}
+.contact span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal;
+  width: 29rem;
+  max-width: 90%;
+  font-weight: bold;
+}
+.contact i {
+  font-size: 1.8rem;
+}
+#scrollToTop {
+  position: fixed;
+  bottom: 2rem;
+  width: 4rem;
+  height: 4rem;
+  left: 50%;
+  margin-left: -2rem;
+  line-height: 5rem;
+  text-align: center;
+  border-radius: 50%;
+  z-index: 2000;
+  background-color: #5BC8AC;
+  font-size: 5rem;
+  color: white;
+  font-weight: bold;
+  opacity: 0;
+  transition: box-shadow 0.3s, opacity 0.3s;
+  box-shadow: 0rem 0rem 1rem rgba(0,0,0,0.5);
+}
+#scrollToTop:hover {
+  box-shadow: 0rem 0rem 2rem rgba(0,0,0,0.5);
+  transition: box-shadow 0.3s, opacity 0.3s;
+}
+.visible {
+  opacity: 1 !important;
+  transition: box-shadow 0.3s, opacity 1s !important;
+}
+@media only screen and (max-width: 768px){
+  html {
+    font-size: 4.35vw;
+  }
+  .header span {
+    width: 90%;
+  }
+  .projects {
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: 100vw;
+  }
+  .project-div .description {
+    opacity: 1;
+  }
+  .about {
+    margin-top: 700vw;
+  }
+  .contact {
+    margin-top: 700vw;
+  }
+}
